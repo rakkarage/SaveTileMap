@@ -10,6 +10,8 @@ onready var _loadButton: Button = $Interface/Panel/VBox/Load
 const _path := "res://Saved.tscn"
 
 func _ready() -> void:
+	_back.owner = _persist
+	_fore.owner = _persist
 	assert(_saveButton.connect("pressed", self, "_save") == OK)
 	assert(_clearButton.connect("pressed", self, "_clear") == OK)
 	assert(_loadButton.connect("pressed", self, "_load") == OK)
