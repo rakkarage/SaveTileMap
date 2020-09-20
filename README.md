@@ -8,7 +8,9 @@
 
 ## Todo
 
-- fix merge with loop
+- fix merge
+  - by not having sprite have same parent?
+  - with loop?
 - fix error!?
 - fuck it all and go back to saving in json
   - make test using json too

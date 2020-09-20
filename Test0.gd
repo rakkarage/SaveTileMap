@@ -31,5 +31,13 @@ func _clear() -> void:
 func _load() -> void:
 	print("load")
 	var packed: PackedScene = ResourceLoader.load(_path)
-	_persist = packed.instance()
-	add_child(_persist)
+	var scene = packed.instance()
+	for child in scene.get_children():
+		print(child.name)
+		var exist = _persist.get_node(child.name)
+		print(exist)
+		if exist != null:
+			exist.queue_free()
+			scene.rem
+			_persist.add_child(child)
+			child.owner = _persist
