@@ -30,3 +30,4 @@ func _load() -> void:
 	print("load")
 	var packed: PackedScene = ResourceLoader.load(_path)
 	_persist = packed.instance()
+	add_child(_persist)
