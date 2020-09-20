@@ -1,9 +1,9 @@
 extends Control
 
-onready var _persist := $Persist
-onready var _back: TileMap = $Persist/Back
-onready var _sprite: Sprite = $Persist/Sprite
-onready var _fore: TileMap = $Persist/Fore
+onready var _parent := $Parent
+onready var _back: TileMap = $Parent/Back
+onready var _sprite: Sprite = $Parent/Sprite
+onready var _fore: TileMap = $Parent/Fore
 onready var _saveButton: Button = $Interface/Panel/VBox/Save
 onready var _clearButton: Button = $Interface/Panel/VBox/Clear
 onready var _loadButton: Button = $Interface/Panel/VBox/Load
