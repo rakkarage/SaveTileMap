@@ -44,39 +44,73 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -128.0
+margin_left = -256.0
 margin_top = -128.0
-margin_right = -64.0
-margin_bottom = -64.0
-rect_min_size = Vector2( 128, 128 )
+rect_min_size = Vector2( 256, 128 )
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
-[node name="VBox" type="VBoxContainer" parent="Interface/Panel"]
+[node name="HBox" type="HBoxContainer" parent="Interface/Panel"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 121.0
+margin_right = 249.0
 margin_bottom = 121.0
 
-[node name="Save" type="Button" parent="Interface/Panel/VBox"]
-margin_right = 114.0
+[node name="VBox0" type="VBoxContainer" parent="Interface/Panel/HBox"]
+margin_right = 119.0
+margin_bottom = 114.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Save" type="Button" parent="Interface/Panel/HBox/VBox0"]
+margin_right = 119.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Save"
 
-[node name="Clear" type="Button" parent="Interface/Panel/VBox"]
+[node name="Clear" type="Button" parent="Interface/Panel/HBox/VBox0"]
 margin_top = 39.0
-margin_right = 114.0
+margin_right = 119.0
 margin_bottom = 74.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Clear"
 
-[node name="Load" type="Button" parent="Interface/Panel/VBox"]
+[node name="Load" type="Button" parent="Interface/Panel/HBox/VBox0"]
 margin_top = 78.0
-margin_right = 114.0
+margin_right = 119.0
+margin_bottom = 114.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Load"
+
+[node name="VBox1" type="VBoxContainer" parent="Interface/Panel/HBox"]
+margin_left = 123.0
+margin_right = 242.0
+margin_bottom = 114.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Save" type="Button" parent="Interface/Panel/HBox/VBox1"]
+margin_right = 119.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Save"
+
+[node name="Clear" type="Button" parent="Interface/Panel/HBox/VBox1"]
+margin_top = 39.0
+margin_right = 119.0
+margin_bottom = 74.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Clear"
+
+[node name="Load" type="Button" parent="Interface/Panel/HBox/VBox1"]
+margin_top = 78.0
+margin_right = 119.0
 margin_bottom = 114.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
