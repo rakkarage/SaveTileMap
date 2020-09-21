@@ -43,6 +43,13 @@ func _load0() -> void:
 			_parent.add_child(child, true)
 			child.owner = _parent
 
+var data := {
+	"map": {
+		"back": [],
+		"fore": []
+	}
+}
+
 func _save1() -> void:
 	print("save1")
 
