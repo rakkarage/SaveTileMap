@@ -7,8 +7,7 @@ onready var _loadButton0: Button = $Interface/Panel/HBox/VBox0/Load
 onready var _saveButton1: Button = $Interface/Panel/HBox/VBox1/Save
 onready var _clearButton1: Button = $Interface/Panel/HBox/VBox1/Clear
 onready var _loadButton1: Button = $Interface/Panel/HBox/VBox1/Load
-const _path0 := "res://Saved.tscn"
-const _path1 := "res://Saved.cfg"
+const _path := "res://Saved.tscn"
 
 func _ready() -> void:
 	$Parent/Back.owner = _parent
@@ -29,11 +28,11 @@ func _save0() -> void:
 	print("save0")
 	var packed := PackedScene.new()
 	assert(packed.pack(_parent) == OK)
-	assert(ResourceSaver.save(_path0, packed) == OK)
+	assert(ResourceSaver.save(_path, packed) == OK)
 
 func _load0() -> void:
 	print("load0")
-	var packed: PackedScene = ResourceLoader.load(_path0)
+	var packed: PackedScene = ResourceLoader.load(_path)
 	var scene = packed.instance()
 	for child in scene.get_children():
 		var exist = _parent.get_node(child.name)
@@ -42,13 +41,6 @@ func _load0() -> void:
 			scene.remove_child(child)
 			_parent.add_child(child, true)
 			child.owner = _parent
-
-var data := {
-	"map": {
-		"back": [],
-		"fore": []
-	}
-}
 
 func _save1() -> void:
 	print("save1")
