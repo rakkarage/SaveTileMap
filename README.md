@@ -5,6 +5,7 @@
 
 ## Todo
 
+- priority error shows sand tile?
 - fix error!?
 - fuck it all and go back to saving in json
   - make test using json too
