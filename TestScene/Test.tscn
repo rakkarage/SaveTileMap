@@ -51,7 +51,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBox0" type="VBoxContainer" parent="Interface/Panel"]
+[node name="VBox" type="VBoxContainer" parent="Interface/Panel"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 249.0
@@ -59,14 +59,14 @@ margin_bottom = 121.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Save" type="Button" parent="Interface/Panel/VBox0"]
+[node name="Save" type="Button" parent="Interface/Panel/VBox"]
 margin_right = 242.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Save"
 
-[node name="Clear" type="Button" parent="Interface/Panel/VBox0"]
+[node name="Clear" type="Button" parent="Interface/Panel/VBox"]
 margin_top = 39.0
 margin_right = 242.0
 margin_bottom = 74.0
@@ -74,7 +74,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Clear"
 
-[node name="Load" type="Button" parent="Interface/Panel/VBox0"]
+[node name="Load" type="Button" parent="Interface/Panel/VBox"]
 margin_top = 78.0
 margin_right = 242.0
 margin_bottom = 114.0
