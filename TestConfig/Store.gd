@@ -31,7 +31,6 @@ func write() -> void:
 	assert(_config.save(_path) == OK)
 
 func setMap(map: TileMap, key: String) -> void:
-	data.map.back = {}
 	for i in map.get_used_cells():
 		var id = map.get_cellv(i)
 		var flipX = map.is_cell_x_flipped(i.x, i.y)
@@ -43,4 +42,4 @@ func setMap(map: TileMap, key: String) -> void:
 func getMap(map: TileMap, key: String) -> void:
 	for k in data.map[key].keys():
 		var i = data.map[key][k]
-		map.set_cellv(k, i[0], i[1], i[2], i[3]. id[4])
+		map.set_cell(k.x, k.y, i[0], i[1], i[2], i[3], i[4])
