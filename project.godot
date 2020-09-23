@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="SaveTileMap"
-run/main_scene="res://TestScene/TestScene.tscn"
+run/main_scene="res://TestConfig/TestConfig.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Store="*res://TestConfig/Store.gd"
 
 [rendering]
 

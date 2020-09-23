@@ -19,18 +19,12 @@ func _clear() -> void:
 
 func _save() -> void:
 	print("save")
-	# var packed := PackedScene.new()
-	# assert(packed.pack(_parent) == OK)
-	# assert(ResourceSaver.save(_path, packed) == OK)
+	Store.setMap(_back, "back")
+	Store.setMap(_fore, "fore")
+	Store.write()
 
 func _load() -> void:
 	print("load")
-	# var packed: PackedScene = ResourceLoader.load(_path)
-	# var scene = packed.instance()
-	# for child in scene.get_children():
-	# 	var exist = _parent.get_node(child.name)
-	# 	if exist != null:
-	# 		exist.free()
-	# 		scene.remove_child(child)
-	# 		_parent.add_child(child, true)
-	# 		child.owner = _parent
+	Store.read()
+	Store.getMap(_back, "back")
+	Store.getMap(_fore, "fore")

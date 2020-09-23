@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://TestScene/TestScene.gd" type="Script" id=3]
 
-[node name="Test0" type="Control"]
+[node name="TestScene" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
